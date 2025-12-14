@@ -8,32 +8,30 @@ import static org.junit.jupiter.api.Assertions.*;
 class SonguyenTest {
     private Songuyen kiemTra;
     @BeforeEach
-    void setup() {kiemTra = new Songuyen();}
-
-    @Test
-    public void TestBienMin(){
-        assertTrue(kiemTra.KiemTra(1));
+    void setup(){kiemTra = new Songuyen();
     }
     @Test
-    public void TestBienMax(){
-        assertTrue(kiemTra.KiemTra(100));
+    public void TestBienMin1(){
+        assertTrue(kiemTra.Kiemtra(1));
     }
     @Test
-    public void TestCanBienMin2(){
-        assertTrue(kiemTra.KiemTra(2));
+    public void TestBienMax100(){
+        assertTrue(kiemTra.Kiemtra(100));
     }
     @Test
-    public void TestCanBienMax99(){
-        assertTrue(kiemTra.KiemTra(99));
+    public void TestBienCanBienMin2(){
+        assertTrue(kiemTra.Kiemtra(2));
     }
     @Test
-    public void TestCanBienMin0(){
-        assertThrows(IllegalArgumentException.class, () -> kiemTra.KiemTra(0));
+    public void TestBienCanBienMax99(){
+        assertTrue(kiemTra.Kiemtra(99));
+    }
+    @Test
+    public void TestBienCanBienMin0(){
+        assertThrows(IllegalArgumentException.class, () -> kiemTra.Kiemtra(0));
     }
     @Test
     public void TestCanBienMax101(){
-        assertThrows(IllegalArgumentException.class, () ->kiemTra.KiemTra(101));
+        assertThrows(IllegalArgumentException.class, () -> kiemTra.Kiemtra(101));
     }
-
-
 }
